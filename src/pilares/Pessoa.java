@@ -1,10 +1,14 @@
 package pilares;
 
 public class Pessoa {
-    private String nome;
-    private int idade;
-    private String endereco;
+    protected String nome;
+    protected int idade;
+    protected String endereco;
+    protected float rendaAnual;
 
+    public double calcularImposto() {
+        return 0.0;
+    }
     public String getNome() {
         return nome;
     }
@@ -23,6 +27,12 @@ public class Pessoa {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+    public float getRendaAnual() {
+        return rendaAnual;
+    }
+    public void setRendaAnual(float rendaAnual) {
+        this.rendaAnual = rendaAnual;
+    }
     public void escreverNaTela() {
         System.out.println("Pessoa{" +
                 "nome='" + nome + '\'' +
@@ -30,6 +40,7 @@ public class Pessoa {
                 ", endereco='" + endereco + '\'' +
                 '}');
     }
+
 }
 
 
